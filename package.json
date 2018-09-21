@@ -6,8 +6,13 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
+    "test": "npm run test:unit",
     "test:unit": "vue-cli-service test:unit",
-    "test:e2e": "vue-cli-service test:e2e --headless"
+    "test:e2e": "vue-cli-service test:e2e --headless",
+    "open:console": "open https://console.firebase.google.com/u/2/",
+    "open:ci": "open https://circleci.com/gh/ibotdotout/workflows/ci-cd-demo",
+    "open:staging": "open https://ci-cd-demo-staging.firebaseapp.com/",
+    "open:prod": "open https://ci-cd-demo-production.firebaseapp.com/"
   },
   "dependencies": {
     "vue": "^2.5.17",
