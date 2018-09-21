@@ -1,0 +1,6 @@
+{
+  "projects": {
+    "default": "ci-cd-demo-staging",
+    "production": "ci-cd-demo-production"
+  }
+}
