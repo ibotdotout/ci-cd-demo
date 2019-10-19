@@ -23,4 +23,4 @@ CircleCI pipeline example with Vue.js
 6. Get FIREBASEO_TOKEN for CI by `npm run fb:login-ci` with [Firebase-tools](https://github.com/firebase/firebase-tools)
 7. Add $FIREBASE_TOKEN to CircleCI Project Settings: [Environment Variables](https://circleci.com/docs/2.0/env-vars/)
 
-![Image of $FIREBASE_TOKEN_](readme-img/env-var.png)
+![Image of $FIREBASE_TOKEN_](readme-img/env-vars.png)
