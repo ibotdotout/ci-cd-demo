@@ -1,11 +1,11 @@
 # ci-cd-demo [![CircleCI](https://circleci.com/gh/ibotdotout/ci-cd-demo.svg?style=svg)](https://circleci.com/gh/ibotdotout/ci-cd-demo)
-CircleCI pipeline example with Vue.js
+[CircleCI](https://circleci.com/) pipeline example with [Vue.js](https://vuejs.org/)
 
 ![Image of Pipeline](readme-img/pipeline.png)
 
 ## Most setting are in
 - `packages.json`
-- `.circleci/config.yml`
+- `.circleci/config.yml` - [CircleCI JS Config](https://circleci.com/docs/2.0/language-javascript/)
 
 ## Setup
 
