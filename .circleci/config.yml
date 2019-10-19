@@ -44,7 +44,7 @@ jobs:
 
   test-e2e:
     docker:
-      - image: cypress/base:8
+      - image: cypress/base:10
     working_directory: ~/repo
     steps:
       - attach_workspace:
