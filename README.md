@@ -29,3 +29,4 @@
 
 References:
 - [Firebase Hosting](https://firebase.google.com/docs/hosting)
+- [The Practical Test Pyramid](https://martinfowler.com/articles/practical-test-pyramid.html)
