@@ -26,3 +26,6 @@
 7. Add `FIREBASE_TOKEN` to CircleCI Project Settings: [Environment Variables](https://circleci.com/docs/2.0/env-vars/)
 
 ![Image of $FIREBASE_TOKEN_](readme-img/env-vars.png)
+
+References:
+- [Firebase Hosting](https://firebase.google.com/docs/hosting)
