@@ -1,6 +1,6 @@
 {
   "name": "ci-cd-demo",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
   "scripts": {
     "start": "npm run serve",
@@ -10,10 +10,15 @@
     "test": "npm run test:unit",
     "test:unit": "vue-cli-service test:unit",
     "test:e2e": "vue-cli-service test:e2e --headless",
+    "test:audit": "npm audit --audit-level=critical",
     "open:console": "open https://console.firebase.google.com/u/2/",
     "open:ci": "open https://circleci.com/gh/ibotdotout/workflows/ci-cd-demo",
     "open:staging": "open https://ci-cd-demo-staging.firebaseapp.com/",
-    "open:prod": "open https://ci-cd-demo-production.firebaseapp.com/"
+    "open:prod": "open https://ci-cd-demo-production.firebaseapp.com/",
+    "fb:login": "firebase login",
+    "fb:login-ci": "firebase login:ci",
+    "fb:deploy": "firebase use default && firebase deploy --token=$FIREBASE_TOKEN",
+    "fb:deploy-prod": "firebase use production && firebase deploy --token=$FIREBASE_TOKEN"
   },
   "dependencies": {
     "vue": "^2.5.17",
