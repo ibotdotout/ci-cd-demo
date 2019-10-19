@@ -52,6 +52,13 @@ jobs:
       - run: ./node_modules/.bin/cypress install
       - run: npm run test:e2e
 
+  test-audit:
+    <<: *defaults
+    steps:
+      - attach_workspace:
+          at: ~/repo
+      - run: npm run test:audit
+
   build:
     <<: *defaults
     steps:
@@ -69,8 +76,7 @@ jobs:
           at: ~/repo
       # run "$ firebase login:ci" to get your ci token
       # put your token to your circle ci
-      - run: ./node_modules/.bin/firebase use default
-      - run: ./node_modules/.bin/firebase deploy --token=$FIREBASE_TOKEN
+      - run: npm run fb:deploy
 
   deploy-prod:
     <<: *defaults
@@ -79,8 +85,7 @@ jobs:
           at: ~/repo
       # run "$ firebase login:ci" to get your ci token
       # put your token to your circle ci
-      - run: ./node_modules/.bin/firebase use production
-      - run: ./node_modules/.bin/firebase deploy --token=$FIREBASE_TOKEN
+      - run: npm run fb:deploy-prod
 
 workflows:
   version: 2
@@ -96,9 +101,13 @@ workflows:
       - test-e2e:
           requires:
             - checkout
+      - test-audit:
+          requires:
+            - test-unit
       - build:
           requires:
             - test-unit
+            - test-audit
             - lint
       - deploy:
           requires:
